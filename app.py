@@ -180,6 +180,17 @@ with st.container():
 #----K-Means----
 with st.container():
     st.subheader('K-Means Clustering')
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.image(cluster)
+        
+    with right_column:
+        st.write(
+                """
+                We did a 3D model for clustering technique from mpl\_toolkits.mplot3d from Axes3D python library. We identified 3 clusters.
+                The three clusters represent low temperature, high temperature and Windspeed. It is apparent that weather has an affect on the sales. 
+                Sales increases when temperature
+                """)
 #---------------
 
 #----models----
