@@ -274,4 +274,4 @@ with st.echo():
         popup = folium.Popup(iframe, min_width = 185, max_width = 185)
         folium.Marker(location = [row.loc['latitude'], row.loc['longitude']], popup = popup).add_to(map)
 
-    folium_static(map, width = 700, height = 1400)
+    folium_static(map, width = 1200, height = 700)
