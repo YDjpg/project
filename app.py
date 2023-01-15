@@ -265,7 +265,7 @@ with st.container():
 #---------------
 
 #----map----
-def display_map(data):
+with st.echo():
     location = data['latitude'].mean(), data['longitude'].mean()
     map = folium.Map(location = location, tiles='CartoDB positron', zoom_start = 14, scrollWheelZoom = False)
     for (index, row) in data.iterrows():
@@ -273,12 +273,5 @@ def display_map(data):
                             str(row.loc['TimeSpent_minutes']) + '<br>' + 'TotalSpent_RM: ' + str(row.loc['TotalSpent_RM']))
         popup = folium.Popup(iframe, min_width = 185, max_width = 185)
         folium.Marker(location = [row.loc['latitude'], row.loc['longitude']], popup = popup).add_to(map)
-    
-    st_map = st_folium(map, width = 1500, height = 700)
-#---------------
 
-def main():
-    display_map(data)
-    
-if __name__ == "__main__":
-    main()
+    folium_static(map, width = 700, height = 1400)
