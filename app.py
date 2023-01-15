@@ -40,6 +40,7 @@ ensemble = Image.open('images/ensemble.png')
 hyperNB = Image.open('images/hyper nb5.png')
 hyperKNN = Image.open('images/hyper knn5.png')
 roc = Image.open('images/roc curve.png')
+cluster = Image.open('images/KMeansClustering.jpeg')
 #---------------
 
 #----header----
